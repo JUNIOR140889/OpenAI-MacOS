@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct FormView: View {
     @State private var email = "";
@@ -13,7 +14,8 @@ struct FormView: View {
     @State private var username = "";
     @State private var fullname = "";
     @State private var date:Date = Date();
-    @State private var pickerInput = "Option 1";
+    @State private var pickerInput = "Male";
+    @State var filename = ""
     
     let pickerOptions = ["Male", "Female", "Other"];
     var body: some View {
@@ -45,16 +47,17 @@ struct FormView: View {
                 }
                 .frame(width: 300, height: 400)
                 
+                Button {
+                    if let json = readJson($filename) {
+                        let allStrings = extractAllStrings(from: json)
+                        print(allStrings)
+                    }
+                } label: {
+                    Text("button")
+                }
+                
                 NavigationLink(destination: SomeView()) {
-                    Button(action: {
-                        print(email, username, fullname, password, date, pickerInput)
-                    }, label: {
-                        Text("Press button")
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.blue)
-                            .cornerRadius(8)
-                    })
+                    Text("Save")
                 }
             }
         }

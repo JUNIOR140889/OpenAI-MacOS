@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB2746E32C19F510009B2B5E /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2746E22C19F510009B2B5E /* FileReader.swift */; };
+		AB2746E52C1A304D009B2B5E /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2746E42C1A304D009B2B5E /* JSONDecoder.swift */; };
+		AB8C4C9B2C10F2BC00B4FEEC /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C4C9A2C10F2BC00B4FEEC /* Types.swift */; };
 		ABF356462C0F55780005A073 /* OpenAI_MacOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF356452C0F55780005A073 /* OpenAI_MacOSApp.swift */; };
 		ABF356482C0F55780005A073 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF356472C0F55780005A073 /* ContentView.swift */; };
 		ABF3564A2C0F55790005A073 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF356492C0F55790005A073 /* Assets.xcassets */; };
@@ -18,6 +21,8 @@
 		ABF356752C0F561A0005A073 /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF356742C0F561A0005A073 /* SomeView.swift */; };
 		ABF356772C0F563F0005A073 /* OpenAIApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF356762C0F563F0005A073 /* OpenAIApi.swift */; };
 		ABF3567A2C0F565F0005A073 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = ABF356792C0F565F0005A073 /* OpenAI */; };
+		ABF3567C2C10AF940005A073 /* CatalogGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF3567B2C10AF940005A073 /* CatalogGenerator.swift */; };
+		ABF3567E2C10B0190005A073 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ABF3567D2C10B0190005A073 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB2746E22C19F510009B2B5E /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		AB2746E42C1A304D009B2B5E /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
+		AB8C4C9A2C10F2BC00B4FEEC /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		ABF356422C0F55780005A073 /* OpenAI-MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenAI-MacOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF356452C0F55780005A073 /* OpenAI_MacOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI_MacOSApp.swift; sourceTree = "<group>"; };
 		ABF356472C0F55780005A073 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +60,8 @@
 		ABF356722C0F55F90005A073 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		ABF356742C0F561A0005A073 /* SomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
 		ABF356762C0F563F0005A073 /* OpenAIApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIApi.swift; sourceTree = "<group>"; };
+		ABF3567B2C10AF940005A073 /* CatalogGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogGenerator.swift; sourceTree = "<group>"; };
+		ABF3567D2C10B0190005A073 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB2746E12C19F502009B2B5E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AB2746E22C19F510009B2B5E /* FileReader.swift */,
+				AB2746E42C1A304D009B2B5E /* JSONDecoder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		ABF356392C0F55780005A073 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +122,7 @@
 		ABF356442C0F55780005A073 /* OpenAI-MacOS */ = {
 			isa = PBXGroup;
 			children = (
+				AB2746E12C19F502009B2B5E /* Helpers */,
 				ABF356712C0F55E60005A073 /* OpenAI */,
 				ABF356702C0F55DE0005A073 /* Views */,
 				ABF356452C0F55780005A073 /* OpenAI_MacOSApp.swift */,
@@ -110,6 +130,7 @@
 				ABF356492C0F55790005A073 /* Assets.xcassets */,
 				ABF3564E2C0F55790005A073 /* OpenAI_MacOS.entitlements */,
 				ABF3564B2C0F55790005A073 /* Preview Content */,
+				ABF3567D2C10B0190005A073 /* Localizable.xcstrings */,
 			);
 			path = "OpenAI-MacOS";
 			sourceTree = "<group>";
@@ -152,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				ABF356762C0F563F0005A073 /* OpenAIApi.swift */,
+				ABF3567B2C10AF940005A073 /* CatalogGenerator.swift */,
+				AB8C4C9A2C10F2BC00B4FEEC /* Types.swift */,
 			);
 			path = OpenAI;
 			sourceTree = "<group>";
@@ -245,6 +268,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = ABF356392C0F55780005A073;
 			packageReferences = (
@@ -268,6 +292,7 @@
 			files = (
 				ABF3564D2C0F55790005A073 /* Preview Assets.xcassets in Resources */,
 				ABF3564A2C0F55790005A073 /* Assets.xcassets in Resources */,
+				ABF3567E2C10B0190005A073 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +320,12 @@
 				ABF356752C0F561A0005A073 /* SomeView.swift in Sources */,
 				ABF356772C0F563F0005A073 /* OpenAIApi.swift in Sources */,
 				ABF356732C0F55F90005A073 /* FormView.swift in Sources */,
+				AB2746E52C1A304D009B2B5E /* JSONDecoder.swift in Sources */,
+				AB8C4C9B2C10F2BC00B4FEEC /* Types.swift in Sources */,
 				ABF356482C0F55780005A073 /* ContentView.swift in Sources */,
 				ABF356462C0F55780005A073 /* OpenAI_MacOSApp.swift in Sources */,
+				AB2746E32C19F510009B2B5E /* FileReader.swift in Sources */,
+				ABF3567C2C10AF940005A073 /* CatalogGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +486,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OpenAI-MacOS/OpenAI_MacOS.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -482,6 +512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OpenAI-MacOS/OpenAI_MacOS.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

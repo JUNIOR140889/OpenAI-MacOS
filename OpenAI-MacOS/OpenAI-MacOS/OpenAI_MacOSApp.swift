@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import OpenAI
 
 @main
 struct OpenAI_MacOSApp: App {
     var body: some Scene {
         WindowGroup {
-            FormView();
+            FormView()
+                .onAppear() {
+                    Task {
+                        try await translate();
+                    }
+                }
         }
     }
 }
