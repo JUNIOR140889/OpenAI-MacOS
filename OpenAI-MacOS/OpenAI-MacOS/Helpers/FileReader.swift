@@ -24,3 +24,22 @@ func readJson(_ filename: Binding<String>) -> [String: Any]? {
     }
     return nil
 }
+
+func saveJsonWithPanel(dictionary: [String: Any]) {
+    let savePanel = NSSavePanel()
+    savePanel.title = "Save JSON File"
+    savePanel.allowedContentTypes = [.json]
+    savePanel.nameFieldStringValue = "modified.json"
+    
+    savePanel.begin { (result) in
+        if result == .OK, let url = savePanel.url {
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+                try jsonData.write(to: url)
+                print("Modified JSON saved to \(url.path)")
+            } catch {
+                print("Error saving JSON: \(error)")
+            }
+        }
+    }
+}

@@ -51,6 +51,10 @@ struct FormView: View {
                     if let json = readJson($filename) {
                         let allStrings = extractAllStrings(from: json)
                         print(allStrings)
+                        if let replacedJson = replaceStringsInJson(from: json, replacementArray: allStrings) {
+                            print(replacedJson)
+                            saveJsonWithPanel(dictionary: replacedJson)
+                        }
                     }
                 } label: {
                     Text("button")
